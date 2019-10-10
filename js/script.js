@@ -1,7 +1,8 @@
 $( "document" ).ready(function() {
     $("#button").click(function(){
-            var input = $(".input").val();
-            $(".output").html("<p>"+input+"</p>")
+        alert("does this even work?");
+        var input = $(".input").val();
+        $(".output").html("<p>"+phraseconvert(input)+"</p>")
     });
 
     function wordconvert(word){
@@ -10,6 +11,9 @@ $( "document" ).ready(function() {
 
     function phraseconvert(phrase){
         words = phrase.split(" ");
-        for(var i = 0; i < words.length);
+        var output = "";
+        for(var i = 0; i < words.length, i++;){
+            output = output + wordconvert(words[i]);
+        }
     }
 });
