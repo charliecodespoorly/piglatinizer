@@ -1,7 +1,7 @@
 $( "document" ).ready(function() {
     $("#button").click(function(){
-        alert("does this even work?");
         var input = $(".input").val();
+        alert(input);
         $(".output").html("<p>"+phraseconvert(input)+"</p>")
     });
 
@@ -15,5 +15,6 @@ $( "document" ).ready(function() {
         for(var i = 0; i < words.length, i++;){
             output = output + wordconvert(words[i]);
         }
+        return output;
     }
 });
