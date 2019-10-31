@@ -1,18 +1,15 @@
 $( "document" ).ready(function() {
     $("#button").click(function(){
         var input = $(".input").val();
-        // alert(phraseconvert(input));
         $(".output").text(phraseconvert(input))
     });
 
     function wordconvert(word){
-        // alert("eagle".match("/$[aeiou]+/g"));
         if(word.match(/^[aeiou]+/)){
           return(word+"ay")
         }
-
         else{
-          return(word.match(/^[^aeiou]+/)+"ay ");
+          return(word.replace(word.match(/^[^aeiou]+/), "") + word.match(/^[^aeiou]+/)+"ay ");          
         }
     }
 
